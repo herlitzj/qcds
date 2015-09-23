@@ -49,7 +49,7 @@ meanLabel = sum(labels)/nrows
 sdLabel = sqrt(sum([(labels[i] - meanLabel) * (labels[i] - meanLabel) for i in range(nrows)]) / nrows)
 labelNormalized = [(labels[i] - meanLabel) / sdLabel for i in range(nrows)]
 
-yNormed = False
+yNormed = True
 xNormed = False
 
 if yNormed:
