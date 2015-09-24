@@ -79,10 +79,15 @@ plot.semilogx()
 plot.legend()
 ax = plot.gca()
 ax.invert_xaxis()
+ax.spines["top"].set_visible(False)
+ax.spines["bottom"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
+
 plot.xlabel('alpha')
 plot.ylabel('Mean Square Error')
 plot.axis('tight')
-plot.savefig('winelassoXYunnorm.jpg')
+plot.savefig('./img/winelassoXYunnorm.jpg')
 
 #print the value of alpha that minimizes CV error
 print('alpha value that minimized CV error: ', wineModel.alpha_)
